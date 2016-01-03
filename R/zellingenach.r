@@ -76,7 +76,7 @@ make_maps <- function(verbose=TRUE) {
     gg <- gg + theme(strip.text=element_blank())
     gg <- gg + theme(legend.position="right")
 
-    list(title=sprintf("-%s", suf_nam[[i]][1]),
+    list(title=sprintf("&#8209;%s", suf_nam[[i]][1]),
          subtitle=ifelse(length(suf_nam[[i]])<=1, "",
                          paste0(sprintf("&#8209;%s", suf_nam[[i]][2:length(suf_nam[[i]])]),
                                 collapse=", ")),
@@ -112,7 +112,7 @@ display_maps <- function(output_file=NULL) {
       p(HTML("An #rstats homage to <a href='http://truth-and-beauty.net/experiments/ach-ingen-zell/'>-ach, -inge, -zell</a>.<br/><br/>")),
       pblapply(1:length(syl_maps), function(i) {
         div(class="map",
-            h2(class="map", syl_maps[[i]]$title),
+            h2(class="map", HTML(syl_maps[[i]]$title)),
             h4(class="map", HTML(syl_maps[[i]]$subtitle)),
             suppressMessages(htmlSVG(print(syl_maps[[i]]$gg))),
             h3(class="map", sprintf("%s places", comma(syl_maps[[i]]$total))))
