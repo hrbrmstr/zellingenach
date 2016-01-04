@@ -3,6 +3,8 @@
 
 
 
+[![DOI](https://zenodo.org/badge/5630/hrbrmstr/zellingenach.svg)](https://zenodo.org/badge/latestdoi/5630/hrbrmstr/zellingenach)
+
 <h1>-zell, -ingen, -ach</h1>
 
 An #rstats homage to [-ach, -inge, -zell](http://truth-and-beauty.net/experiments/ach-ingen-zell/).
