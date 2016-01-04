@@ -22,6 +22,8 @@ An #rstats homage to [-ach, -inge, -zell](http://truth-and-beauty.net/experiment
 
 Please see the [blog post](https://wp.me/p23idr-ZX) for more information. 
 
+If you prefer a single- `source`-able version, see [this gist](https://gist.github.com/hrbrmstr/f3d2568ad0f27b2384d3).
+
 For the impatient, you can just do:
 
     devtools::install_github("hrbrmstr/ggalt")
