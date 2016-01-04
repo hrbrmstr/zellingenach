@@ -25,7 +25,7 @@ make_maps <- function(verbose=TRUE) {
   if (verbose) message("Making the gridded heat maps")
 
   # we'll need this for the plotting
-  de_hex_map <- fortify(de_hex_polys)
+  de_hex_map <- ggplot2::fortify(de_hex_polys)
 
   # find the hex each town is in
   plc$id <- sprintf("ID%s",
@@ -34,10 +34,10 @@ make_maps <- function(verbose=TRUE) {
                          de_hex_polys))
 
   # count up all the towns in each hex (by line ending grouping)
-  plc <- separate(plc, found, c("f1", "f2", "f3"), sep="\\|", fill="right")
-  plc <- gather(plc, where, found, starts_with("f"))
-  plc <- select(filter(plc, !is.na(found)), -where)
-  de_heat <- count(plc, found, id)
+  plc <- tidyr::separate(plc, found, c("f1", "f2", "f3"), sep="\\|", fill="right")
+  plc <- tidyr::gather(plc, where, found, f1, f2, f3)
+  plc <- dplyr::select(filter(plc, !is.na(found)), -where)
+  de_heat <- dplyr::count(plc, found, id)
 
   # scale the values properly
   de_heat$log <- log(de_heat$n)
@@ -45,7 +45,7 @@ make_maps <- function(verbose=TRUE) {
   # assign colors to the mapped, scaled values
   bin_ct <- 20
   no_fill <- "#fde725"
-  vir <- rev(viridis_pal()(bin_ct+1))
+  vir <- rev(viridis::viridis_pal()(bin_ct+1))
   vir_col <- col_bin(vir[2:length(vir)],
                      range(de_heat$log),
                      bins=bin_ct,
@@ -60,7 +60,7 @@ make_maps <- function(verbose=TRUE) {
 
   lapply(1:length(suf_nam), function(i) {
 
-    cur_heat <- filter(de_heat, found==i)
+    cur_heat <- dplyr::filter(de_heat, found==i)
 
     gg <- ggplot()
     gg <- gg + geom_map(data=de_hex_map, map=de_hex_map,

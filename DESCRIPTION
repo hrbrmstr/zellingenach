@@ -20,7 +20,6 @@ Suggests:
     rmarkdown
 Imports:
     V8,
-    purrr,
     dplyr,
     stringi,
     ggplot2,
@@ -35,5 +34,5 @@ Imports:
     htmltools,
     svglite,
     tidyr
-RoxygenNote: 5.0.1
+RoxygenNote: 5.0.1.9000
 VignetteBuilder: knitr

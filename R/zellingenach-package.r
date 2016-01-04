@@ -20,7 +20,6 @@
 #' @docType package
 #' @author Bob Rudis (@@hrbrmstr)
 #' @importFrom V8 v8
-#' @importFrom purrr flatten map detect_index
 #' @importFrom tidyr gather separate
 #' @importFrom dplyr filter count group_by mutate select
 #' @importFrom stringi stri_detect_regex

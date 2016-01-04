@@ -28,6 +28,6 @@ read_places <- function(suf=suffix_regex()) {
       paste0(plc$found[where_found], sprintf("%d|", i))
   }
 
-  mutate(filter(plc, found != ""), found=sub("\\|$", "", found))
+  dplyr::mutate(dplyr::filter(plc, found != ""), found=sub("\\|$", "", found))
 
 }

@@ -7,11 +7,11 @@
 #' @export
 create_hexgrid <- function() {
 
-  de_shp <- getData("GADM", country="DEU", level=0, path=tempdir())
+  de_shp <- raster::getData("GADM", country="DEU", level=0, path=tempdir())
 
-  de_hex_pts <- spsample(de_shp, type="hexagonal", n=10000, cellsize=0.19,
+  de_hex_pts <- sp::spsample(de_shp, type="hexagonal", n=10000, cellsize=0.19,
                          offset=c(0.5, 0.5), pretty=TRUE)
 
-  HexPoints2SpatialPolygons(de_hex_pts)
+  sp::HexPoints2SpatialPolygons(de_hex_pts)
 
 }
