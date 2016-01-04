@@ -11,6 +11,7 @@ Please see the [blog post](https://wp.me/p23idr-ZX) for more information.
 
 For the impatient, you can just do:
 
+    devtools::install_github("hrbrmstr/ggalt")
     devtools::install_github("hrbrmstr/zellingenach")
     display_maps()
     
