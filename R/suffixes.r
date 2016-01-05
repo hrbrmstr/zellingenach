@@ -2,7 +2,7 @@
 #'
 #' A slightly modified version of the suffix group list from Moritz's post
 #' is included with this package. You can find it at
-#' \code{system.file("alt/suffixlist.js", package="zellingenach")} and it is
+#' \code{system.file("extdata/suffixlist.js", package="zellingenach")} and it is
 #' read in using the \code{V8} package since it was left as a javascript
 #' data structure.
 #'
@@ -16,7 +16,7 @@ suffix_regex <- function() {
 #'
 #' A slightly modified version of the suffix group list from Moritz's post
 #' is included with this package. You can find it at
-#' \code{system.file("alt/suffixlist.js", package="zellingenach")} and it is
+#' \code{system.file("extdata/suffixlist.js", package="zellingenach")} and it is
 #' read in using the \code{V8} package since it was left as a javascript
 #' data structure.
 #'

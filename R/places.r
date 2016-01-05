@@ -1,7 +1,7 @@
 #' Retrieve town names and determine which suffix bucket they belong in
 #'
 #' The CSV file that Mortiz used is bundled with this package. You can find
-#' it at \code{system.file("alt/placenames_de.tsv", package="zellingenach")}
+#' it at \code{system.file("extdata/placenames_de.tsv", package="zellingenach")}
 #'
 #' It reads the names, determines which suffix group a town belongs in and
 #' then filters out all the ones that weren't found.
@@ -13,7 +13,7 @@
 #' @export
 read_places <- function(suf=suffix_regex()) {
 
-  plc <- read.csv(system.file("alt/placenames_de.tsv", package="zellingenach"),
+  plc <- read.csv(system.file("extdata/placenames_de.tsv", package="zellingenach"),
            stringsAsFactors=FALSE)
 
   lapply(suf, function(regex) {

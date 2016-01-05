@@ -7,7 +7,7 @@
   ct <- v8()
   assign("ct", ct, envir=.pkgenv)
 
-  ct$source(system.file("alt/suffixlist.js", package="zellingenach"))
+  ct$source(system.file("extdata/suffixlist.js", package="zellingenach"))
 
   if (interactive()) {
     packageStartupMessage("Call display_maps() to see the visualization.")

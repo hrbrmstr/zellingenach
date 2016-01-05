@@ -106,7 +106,7 @@ display_maps <- function(output_file=NULL) {
   }
 
   tags$html(
-    tags$head(includeHTML(system.file("alt/styles.html", package="zellingenach"))),
+    tags$head(includeHTML(system.file("extdata/styles.html", package="zellingenach"))),
     tags$body(
       h1("-zell, -ingen, -ach"),
       p(HTML("An #rstats homage to <a href='http://truth-and-beauty.net/experiments/ach-ingen-zell/'>-ach, -inge, -zell</a>.<br/><br/>")),

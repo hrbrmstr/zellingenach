@@ -15,7 +15,6 @@ If you prefer a single- `source`-able version, see [this gist](https://gist.gith
 
 For the impatient, you can just do:
 
-    devtools::install_github("hrbrmstr/ggalt")
     devtools::install_github("hrbrmstr/zellingenach")
     display_maps()
     
